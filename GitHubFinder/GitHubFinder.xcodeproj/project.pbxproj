@@ -14,6 +14,11 @@
 		005AB82F2375F7C8007C1851 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005AB82E2375F7C8007C1851 /* Preview Assets.xcassets */; };
 		005AB8322375F7C8007C1851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005AB8302375F7C8007C1851 /* LaunchScreen.storyboard */; };
 		005AB83D2375F7C8007C1851 /* GitHubFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB83C2375F7C8007C1851 /* GitHubFinderTests.swift */; };
+		005AB8552375F90B007C1851 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; };
+		005AB85C2375F90B007C1851 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB85B2375F90B007C1851 /* APITests.swift */; };
+		005AB85E2375F90B007C1851 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 005AB84E2375F90B007C1851 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		005AB8612375F90B007C1851 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; };
+		005AB8622375F90B007C1851 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +29,42 @@
 			remoteGlobalIDString = 005AB8212375F7C6007C1851;
 			remoteInfo = GitHubFinder;
 		};
+		005AB8562375F90B007C1851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005AB81A2375F7C6007C1851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005AB84B2375F90B007C1851;
+			remoteInfo = API;
+		};
+		005AB8582375F90B007C1851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005AB81A2375F7C6007C1851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005AB8212375F7C6007C1851;
+			remoteInfo = GitHubFinder;
+		};
+		005AB85F2375F90B007C1851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 005AB81A2375F7C6007C1851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005AB84B2375F90B007C1851;
+			remoteInfo = API;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		005AB8662375F90B007C1851 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				005AB8622375F90B007C1851 /* API.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		005AB8222375F7C6007C1851 /* GitHubFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +78,12 @@
 		005AB8382375F7C8007C1851 /* GitHubFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005AB83C2375F7C8007C1851 /* GitHubFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubFinderTests.swift; sourceTree = "<group>"; };
 		005AB83E2375F7C8007C1851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005AB84C2375F90B007C1851 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		005AB84E2375F90B007C1851 /* API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		005AB84F2375F90B007C1851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005AB8542375F90B007C1851 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		005AB85B2375F90B007C1851 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		005AB85D2375F90B007C1851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005AB8612375F90B007C1851 /* API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +99,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005AB8492375F90B007C1851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005AB8512375F90B007C1851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005AB8552375F90B007C1851 /* API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +125,8 @@
 			children = (
 				005AB8242375F7C6007C1851 /* GitHubFinder */,
 				005AB83B2375F7C8007C1851 /* GitHubFinderTests */,
+				005AB84D2375F90B007C1851 /* API */,
+				005AB85A2375F90B007C1851 /* APITests */,
 				005AB8232375F7C6007C1851 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +136,8 @@
 			children = (
 				005AB8222375F7C6007C1851 /* GitHubFinder.app */,
 				005AB8382375F7C8007C1851 /* GitHubFinderTests.xctest */,
+				005AB84C2375F90B007C1851 /* API.framework */,
+				005AB8542375F90B007C1851 /* APITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +173,36 @@
 			path = GitHubFinderTests;
 			sourceTree = "<group>";
 		};
+		005AB84D2375F90B007C1851 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				005AB84E2375F90B007C1851 /* API.h */,
+				005AB84F2375F90B007C1851 /* Info.plist */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		005AB85A2375F90B007C1851 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				005AB85B2375F90B007C1851 /* APITests.swift */,
+				005AB85D2375F90B007C1851 /* Info.plist */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		005AB8472375F90B007C1851 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005AB85E2375F90B007C1851 /* API.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		005AB8212375F7C6007C1851 /* GitHubFinder */ = {
@@ -117,10 +212,12 @@
 				005AB81E2375F7C6007C1851 /* Sources */,
 				005AB81F2375F7C6007C1851 /* Frameworks */,
 				005AB8202375F7C6007C1851 /* Resources */,
+				005AB8662375F90B007C1851 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				005AB8602375F90B007C1851 /* PBXTargetDependency */,
 			);
 			name = GitHubFinder;
 			productName = GitHubFinder;
@@ -145,6 +242,43 @@
 			productReference = 005AB8382375F7C8007C1851 /* GitHubFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		005AB84B2375F90B007C1851 /* API */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005AB8632375F90B007C1851 /* Build configuration list for PBXNativeTarget "API" */;
+			buildPhases = (
+				005AB8472375F90B007C1851 /* Headers */,
+				005AB8482375F90B007C1851 /* Sources */,
+				005AB8492375F90B007C1851 /* Frameworks */,
+				005AB84A2375F90B007C1851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = API;
+			productName = API;
+			productReference = 005AB84C2375F90B007C1851 /* API.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		005AB8532375F90B007C1851 /* APITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005AB8672375F90B007C1851 /* Build configuration list for PBXNativeTarget "APITests" */;
+			buildPhases = (
+				005AB8502375F90B007C1851 /* Sources */,
+				005AB8512375F90B007C1851 /* Frameworks */,
+				005AB8522375F90B007C1851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				005AB8572375F90B007C1851 /* PBXTargetDependency */,
+				005AB8592375F90B007C1851 /* PBXTargetDependency */,
+			);
+			name = APITests;
+			productName = APITests;
+			productReference = 005AB8542375F90B007C1851 /* APITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +293,13 @@
 						CreatedOnToolsVersion = 11.2;
 					};
 					005AB8372375F7C8007C1851 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 005AB8212375F7C6007C1851;
+					};
+					005AB84B2375F90B007C1851 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					005AB8532375F90B007C1851 = {
 						CreatedOnToolsVersion = 11.2;
 						TestTargetID = 005AB8212375F7C6007C1851;
 					};
@@ -179,6 +320,8 @@
 			targets = (
 				005AB8212375F7C6007C1851 /* GitHubFinder */,
 				005AB8372375F7C8007C1851 /* GitHubFinderTests */,
+				005AB84B2375F90B007C1851 /* API */,
+				005AB8532375F90B007C1851 /* APITests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +338,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		005AB8362375F7C8007C1851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005AB84A2375F90B007C1851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005AB8522375F90B007C1851 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,6 +379,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		005AB8482375F90B007C1851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		005AB8502375F90B007C1851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005AB85C2375F90B007C1851 /* APITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -229,6 +401,21 @@
 			isa = PBXTargetDependency;
 			target = 005AB8212375F7C6007C1851 /* GitHubFinder */;
 			targetProxy = 005AB8392375F7C8007C1851 /* PBXContainerItemProxy */;
+		};
+		005AB8572375F90B007C1851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005AB84B2375F90B007C1851 /* API */;
+			targetProxy = 005AB8562375F90B007C1851 /* PBXContainerItemProxy */;
+		};
+		005AB8592375F90B007C1851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005AB8212375F7C6007C1851 /* GitHubFinder */;
+			targetProxy = 005AB8582375F90B007C1851 /* PBXContainerItemProxy */;
+		};
+		005AB8602375F90B007C1851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 005AB84B2375F90B007C1851 /* API */;
+			targetProxy = 005AB85F2375F90B007C1851 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -438,6 +625,96 @@
 			};
 			name = Release;
 		};
+		005AB8642375F90B007C1851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = API/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		005AB8652375F90B007C1851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = API/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.API;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		005AB8682375F90B007C1851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubFinder.app/GitHubFinder";
+			};
+			name = Debug;
+		};
+		005AB8692375F90B007C1851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = APITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.APITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubFinder.app/GitHubFinder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +741,24 @@
 			buildConfigurations = (
 				005AB8452375F7C8007C1851 /* Debug */,
 				005AB8462375F7C8007C1851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005AB8632375F90B007C1851 /* Build configuration list for PBXNativeTarget "API" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005AB8642375F90B007C1851 /* Debug */,
+				005AB8652375F90B007C1851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005AB8672375F90B007C1851 /* Build configuration list for PBXNativeTarget "APITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005AB8682375F90B007C1851 /* Debug */,
+				005AB8692375F90B007C1851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
