@@ -21,6 +21,7 @@
 		005AB8622375F90B007C1851 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		005AB86B2375FC68007C1851 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB86A2375FC68007C1851 /* Repository.swift */; };
 		005AB86D2375FD08007C1851 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB86C2375FD08007C1851 /* Connector.swift */; };
+		00CF7A062376AD0900E17908 /* Connector+GitHubType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CF7A052376AD0900E17908 /* Connector+GitHubType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		005AB85D2375F90B007C1851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		005AB86A2375FC68007C1851 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		005AB86C2375FD08007C1851 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		00CF7A052376AD0900E17908 /* Connector+GitHubType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Connector+GitHubType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				005AB84F2375F90B007C1851 /* Info.plist */,
 				005AB86A2375FC68007C1851 /* Repository.swift */,
 				005AB86C2375FD08007C1851 /* Connector.swift */,
+				00CF7A052376AD0900E17908 /* Connector+GitHubType.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CF7A062376AD0900E17908 /* Connector+GitHubType.swift in Sources */,
 				005AB86D2375FD08007C1851 /* Connector.swift in Sources */,
 				005AB86B2375FC68007C1851 /* Repository.swift in Sources */,
 			);
