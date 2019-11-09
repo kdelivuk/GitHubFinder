@@ -19,6 +19,8 @@
 		005AB85E2375F90B007C1851 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = 005AB84E2375F90B007C1851 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		005AB8612375F90B007C1851 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; };
 		005AB8622375F90B007C1851 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 005AB84C2375F90B007C1851 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		005AB86B2375FC68007C1851 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB86A2375FC68007C1851 /* Repository.swift */; };
+		005AB86D2375FD08007C1851 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005AB86C2375FD08007C1851 /* Connector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		005AB8542375F90B007C1851 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		005AB85B2375F90B007C1851 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		005AB85D2375F90B007C1851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005AB86A2375FC68007C1851 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		005AB86C2375FD08007C1851 /* Connector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				005AB84E2375F90B007C1851 /* API.h */,
 				005AB84F2375F90B007C1851 /* Info.plist */,
+				005AB86A2375FC68007C1851 /* Repository.swift */,
+				005AB86C2375FD08007C1851 /* Connector.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 					};
 					005AB84B2375F90B007C1851 = {
 						CreatedOnToolsVersion = 11.2;
+						LastSwiftMigration = 1120;
 					};
 					005AB8532375F90B007C1851 = {
 						CreatedOnToolsVersion = 11.2;
@@ -383,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005AB86D2375FD08007C1851 /* Connector.swift in Sources */,
+				005AB86B2375FC68007C1851 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +557,7 @@
 		005AB8422375F7C8007C1851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubFinder/Preview Content\"";
@@ -567,6 +577,7 @@
 		005AB8432375F7C8007C1851 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubFinder/Preview Content\"";
@@ -628,6 +639,7 @@
 		005AB8642375F90B007C1851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -644,6 +656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -654,6 +667,7 @@
 		005AB8652375F90B007C1851 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
