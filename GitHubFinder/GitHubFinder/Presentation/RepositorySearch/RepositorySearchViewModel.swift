@@ -9,7 +9,7 @@
 import Defines
 import Combine
 
-class RepositorySearchViewModel: ObservableObject, Identifiable {
+final class RepositorySearchViewModel: ObservableObject {
     
     @Published var repositories: [Repository] = []
     

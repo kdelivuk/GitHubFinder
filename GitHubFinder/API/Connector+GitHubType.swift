@@ -22,8 +22,6 @@ public class Connector: GitHubType {
         self.decoder = decoder
     }
 
-    private var cancellable: AnyCancellable?
-    
     public func search(with query: String, sorted: SortType) -> AnyPublisher<[Repository], Error> {
         return session.dataTaskPublisher(for: Router.search.path)
             .tryMap { output in

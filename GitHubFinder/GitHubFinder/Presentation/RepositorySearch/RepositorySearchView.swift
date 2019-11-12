@@ -18,8 +18,10 @@ struct RepositorySearchView: View {
         NavigationView {
             VStack(alignment: HorizontalAlignment.center) {
                 SearchBar(text: $searchTerm)
-                List(Range<Int>(1...5)) { repository in
-                    RepositoryRowView()
+                List {
+                    ForEach(viewModel.repositories) { repository in
+                        RepositoryRowView(viewModel: RepositoryRowViewModel(repository: repository))
+                    }
                 }
                 .environment(\.defaultMinListRowHeight, 100)
             }
