@@ -1,6 +1,6 @@
 //
 //  Repository.swift
-//  API
+//  Defines
 //
 //  Created by Kristijan Delivuk on 08/11/2019.
 //  Copyright © 2019 Kristijan Delivuk. All rights reserved.
@@ -9,14 +9,14 @@
 import Foundation
 
 public struct Repository: Decodable {
-    let id: Int
-    let owner: Owner
-    let name: String
-    let watchers: Int
-    let forks: Int
-    let openIssues: Int
+    public let id: Int
+    public let owner: Owner
+    public let name: String
+    public let watchers: Int
+    public let forks: Int
+    public let openIssues: Int
     
-    struct Owner: Decodable {
+    public struct Owner: Decodable {
         let avatar: URL
         
         enum CodingKeys: String, CodingKey {

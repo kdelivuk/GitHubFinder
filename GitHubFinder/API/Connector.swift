@@ -8,12 +8,4 @@
 
 import Foundation
 
-class Connector {
-    private let session: URLSession
-    private let decoder: JSONDecoder
 
-    init(session: URLSession = .shared, decoder: JSONDecoder = .init()) {
-        self.session = session
-        self.decoder = decoder
-    }
-}
