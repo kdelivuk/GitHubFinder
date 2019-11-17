@@ -25,7 +25,7 @@ struct RepositoryDetailsView: View {
         NavigationView {
             VStack(alignment: HorizontalAlignment.center, spacing: 10) {
                 HStack(alignment: VerticalAlignment.center) {
-                    Image(systemName: "star.fill")
+                    Image("icon-star")
 //                    Text(viewModel.forks)
 //                        .font(.caption)
 //                        .multilineTextAlignment(.leading)

@@ -24,7 +24,6 @@ public class Connector: GitHubType {
 
     public func search(with query: String, sorted: SortType) -> AnyPublisher<[Repository], Error> {
         guard let url = Router.search(query: query).urlWithSearchComponents else { fatalError() }
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
         return session.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {

@@ -20,8 +20,10 @@ struct RepositorySearchView: View {
                     SearchBar(text: $viewModel.searchTerm)
                     if viewModel.isLoading {
                         Spacer()
-                        ProgressIndicator()
-                        Text("Loading...")
+                        VStack {
+                            ProgressIndicator()
+                            Text("Loading...")
+                        }
                         Spacer()
                     } else {
                         List {

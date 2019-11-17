@@ -10,11 +10,11 @@ import SwiftUI
 
 struct SearchBar: UIViewRepresentable {
     
-    @Binding var text : String
+    @Binding var text: String
     
-    class Cordinator : NSObject, UISearchBarDelegate {
+    class Cordinator: NSObject, UISearchBarDelegate {
         
-        @Binding var text : String
+        @Binding var text: String
         
         init(text : Binding<String>) {
             _text = text
@@ -32,6 +32,7 @@ struct SearchBar: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = context.coordinator
+        searchBar.placeholder = "Enter repository name..."
         return searchBar
     }
     
