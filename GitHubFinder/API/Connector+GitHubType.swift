@@ -23,15 +23,27 @@ public class Connector: GitHubType {
     }
 
     public func search(with query: String, sorted: SortType) -> AnyPublisher<[Repository], Error> {
-        return session.dataTaskPublisher(for: Router.search.path)
+        guard let url = Router.search(query: query).urlWithSearchComponents else { fatalError() }
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return session.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
                     throw APIError.statusCode
                 }
                 return output.data
             }
-            .decode(type: [Repository].self, decoder: JSONDecoder())
-            .mapError(APIError.parseError)
+            .decode(type: RepositoryResponse<Repository>.self, decoder: decoder)
+            .map {
+                $0.items
+                
+            }
+            .mapError { error in
+                if let error = error as? APIError {
+                    return error
+                } else {
+                    return APIError.apiError(error.localizedDescription)
+                }
+            }
             .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }

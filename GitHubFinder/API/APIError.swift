@@ -11,5 +11,6 @@ import Foundation
 enum APIError: Error {
     case statusCode
     case responseError
+    case apiError(String)
     case parseError(Error)
 }

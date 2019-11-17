@@ -12,20 +12,32 @@ import API
 struct RepositorySearchView: View {
         
     @ObservedObject var viewModel: RepositorySearchViewModel
-    @State var searchTerm = ""
-    
+        
     var body: some View {
         NavigationView {
-            VStack(alignment: HorizontalAlignment.center) {
-                SearchBar(text: $searchTerm)
-                List {
-                    ForEach(viewModel.repositories) { repository in
-                        RepositoryRowView(viewModel: RepositoryRowViewModel(repository: repository))
+            HStack(alignment: VerticalAlignment.top) {
+                VStack(alignment: HorizontalAlignment.center) {
+                    SearchBar(text: $viewModel.searchTerm)
+                    if viewModel.isLoading {
+                        Spacer()
+                        ProgressIndicator()
+                        Text("Loading...")
+                        Spacer()
+                    } else {
+                        List {
+                            Section {
+                                ForEach(viewModel.repositories) { repository in
+                                    NavigationLink(destination: self.viewModel.currentRepositoryDetails) {
+                                        RepositoryRowView.init(viewModel: repository)
+                                    }
+                                }
+                            }
+                        }
+                        .environment(\.defaultMinListRowHeight, 100)
                     }
                 }
-                .environment(\.defaultMinListRowHeight, 100)
             }
-        .navigationBarTitle(.init("Repository Search"))
+            .navigationBarTitle(.init("Repository Search"))
         }
     }
 }

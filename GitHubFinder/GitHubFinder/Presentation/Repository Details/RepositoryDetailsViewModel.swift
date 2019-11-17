@@ -14,17 +14,17 @@ final class RepositoryDetailsViewModel {
         return String(format: "%.1f", repository.name)
     }
     
-    var watchers: String {
-      return String(format: "%d", repository.watchers)
-    }
-    
-    var forks: String {
-      return String(format: "%d", repository.forks)
-    }
-    
-    var openIssues: String {
-      return String(format: "%d", repository.openIssues)
-    }
+//    var watchers: String {
+//      return String(format: "%d", repository.watchers)
+//    }
+//    
+//    var forks: String {
+//      return String(format: "%d", repository.forks)
+//    }
+//    
+//    var openIssues: String {
+//      return String(format: "%d", repository.openIssues)
+//    }
     
     private let repository: Repository
     
